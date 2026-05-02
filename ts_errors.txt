@@ -1,0 +1,7 @@
+﻿component/main/TopPlacement.tsx(3,20): error TS7031: Binding element 'value' implicitly has an 'any' type.
+component/main/TopPlacement.tsx(3,27): error TS7031: Binding element 'label' implicitly has an 'any' type.
+component/main/TopPlacement.tsx(10,28): error TS7031: Binding element 'name' implicitly has an 'any' type.
+component/main/TopPlacement.tsx(10,34): error TS7031: Binding element 'company' implicitly has an 'any' type.
+component/main/TopPlacement.tsx(10,43): error TS7031: Binding element 'packageAmt' implicitly has an 'any' type.
+component/main/TopPlacement.tsx(10,55): error TS7031: Binding element 'imageUrl' implicitly has an 'any' type.
+component/main/TopPlacement.tsx(10,65): error TS7031: Binding element 'logo' implicitly has an 'any' type.

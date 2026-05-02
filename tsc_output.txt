@@ -1,0 +1,4 @@
+﻿component/main/campuses.tsx(4,52): error TS2307: Cannot find module 'framer-motion' or its corresponding type declarations.
+component/main/campuses.tsx(142,21): error TS7006: Parameter '_' implicitly has an 'any' type.
+component/main/campuses.tsx(142,24): error TS7006: Parameter 'info' implicitly has an 'any' type.
+component/main/FAQsSection.tsx(4,41): error TS2307: Cannot find module 'framer-motion' or its corresponding type declarations.
