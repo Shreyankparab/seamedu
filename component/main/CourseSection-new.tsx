@@ -20,16 +20,9 @@ export default function CourseSection() {
         <section className="my-10 md:my-20  font-inter relative overflow-hidden">
             <div className="container mx-auto px-6 max-w-7xl relative z-10">
                 <div className="flex flex-col items-center mb-12 sm:mb-16 text-center">
-                    {/* <h2 className="text-xs font-bold uppercase tracking-[0.3em] text-blue-600 mb-2">Department Overview</h2> */}
-<<<<<<< HEAD
                     <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
                         Our <span className="text-blue-600">Schools</span>
                     </h2>
-=======
-                    <h3 className="text-2xl md:text-5xl  font-semibold text-black tracking-tighter  leading-none">
-                        Our <span className="text-blue-600">Schools</span>
-                    </h3>
->>>>>>> 3a2e3751a05b675150b1f37f05ba67f72977ed14
                   <p className="text-slate-500 max-w-2xl mx-auto text-md md:text-lg font-medium mt-4 leading-relaxed">
        Explore our diverse schools, each designed to build industry-ready skills and shape future careers.
           </p>

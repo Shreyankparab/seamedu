@@ -85,13 +85,8 @@ const CampusLife = () => {
           <span className="text-blue-600 font-bold tracking-[0.3em] text-[10px] md:text-xs uppercase mb-2">
             Visual Journey
           </span>
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
             Life At <span className="text-blue-600">Seamedu</span>
-=======
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900">
-            Life At Seamedu
->>>>>>> 3a2e3751a05b675150b1f37f05ba67f72977ed14
           </h2>
         </div>
 

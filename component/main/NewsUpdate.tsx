@@ -81,13 +81,8 @@ export default function NewsAndUpdatesSlider() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-6">
           <div className="space-y-2">
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
               News & <span className="text-blue-600">Updates</span>
-=======
-            <h2 className="text-3xl md:text-5xl font-semibold text-slate-800 tracking-tight">
-              News &<span className="text-blue-600"> Updates</span>
->>>>>>> 3a2e3751a05b675150b1f37f05ba67f72977ed14
             </h2>
             <p className="text-slate-500 text-md md:text-lg max-w-4xl font-medium">Stay updated with the latest news and events at Seamedu School of Pro Expression.</p>
           </div>

@@ -59,16 +59,9 @@ export default function FAQsSection() {
 
                 {/* Title - Modern Institutional Style */}
                 <div className="flex flex-col items-center mb-16 text-center">
-                    {/* <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-300 mb-2">Knowledge Hub</h2> */}
-<<<<<<< HEAD
                     <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
                         Got <span className="text-blue-600">Questions?</span>
                     </h2>
-=======
-                    <h3 className="text-3xl md:text-5xl  font-semibold text-slate-900 tracking-tighter leading-[1.1]">
-                        Got &nbsp;<span className="text-blue-600 ">Questions?</span>
-                    </h3>
->>>>>>> 3a2e3751a05b675150b1f37f05ba67f72977ed14
                 </div>
 
                 {/* FAQ Grid - Split into two independent columns for masonry effect */}
