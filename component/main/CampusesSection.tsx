@@ -39,9 +39,15 @@ export default function CampusesSection() {
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.3em] text-blue-600 mb-2">Where We Teach</h2>
+<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
             Our <span className="text-blue-600">Campuses</span>
           </h2>
+=======
+          <h3 className="text-3xl md:text-5xl font-semibold text-slate-900 tracking-tighter leading-none mb-4">
+            Our Campuses
+          </h3>
+>>>>>>> 3a2e3751a05b675150b1f37f05ba67f72977ed14
           <p className="text-slate-500 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
             Join our world-class learning centers in collaboration with leading universities across India.
           </p>

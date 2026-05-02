@@ -35,8 +35,14 @@ export default function PlacementHiring() {
   return (
     <section className="bg-white my-14 md:my-20 font-sans overflow-hidden">
       <div className="text-center mb-10">
+<<<<<<< HEAD
         <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
           Placement <span className="text-blue-600">Highlights</span>
+=======
+        <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 tracking-tight">
+          Placement <span className="text-blue-600">Highlights</span>
+
+>>>>>>> 3a2e3751a05b675150b1f37f05ba67f72977ed14
         </h2>
         <p className='text-md md:text-lg font-medium text-slate-500 mt-4 px-8 sm:px-10'>
           Gain access to top recruiters, real-world experience, and dedicated career support <br /> to kickstart your professional journey.
@@ -73,9 +79,15 @@ export default function PlacementHiring() {
       </div>
 
       <div className="text-center mb-6 sm:mb-10">
+<<<<<<< HEAD
         <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
         Hiring <span className="text-blue-600">Partners</span>
       </h2>
+=======
+        <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 tracking-tight">
+          Hiring <span className="text-blue-600">Partners</span>
+        </h2>
+>>>>>>> 3a2e3751a05b675150b1f37f05ba67f72977ed14
       </div>
 
       {/* Infinite Sliders Container */}

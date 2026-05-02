@@ -88,7 +88,11 @@ export default function StudentWork4() {
         <div className="mb-8">
 
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
+=======
+            <h2 className="text-3xl md:text-5xl font-semibold text-slate-900 tracking-tighter">
+>>>>>>> 3a2e3751a05b675150b1f37f05ba67f72977ed14
               Creative work by <span className="text-blue-600">our students</span>
             </h2>
             {/* <div className="h-px flex-1 bg-slate-100 hidden md:block ml-8"></div> */}

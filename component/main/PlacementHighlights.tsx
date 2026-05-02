@@ -119,7 +119,11 @@ export default function PlacementHighlights() {
             <p className="hidden sm:block text-xs uppercase tracking-widest text-white/40 mb-3">
               Placement Highlights
             </p>
+<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-semibold leading-snug text-white mb-3">
+=======
+            <h2 className="text-3xl lg:text-4xl font-bold leading-snug text-white">
+>>>>>>> 3a2e3751a05b675150b1f37f05ba67f72977ed14
               See Where Our <span className="text-blue-600">Students</span> Are Getting Placed
             </h2>
             <p className="text-base text-white/50 leading-relaxed mt-3 md:mt-0">
