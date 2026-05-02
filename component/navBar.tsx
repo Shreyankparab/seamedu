@@ -215,14 +215,14 @@ export function NavBar() {
         </Link>
 
         {/* Center Navigation Pill (Desktop only) */}
-        <nav className="hidden md:block rounded-full border border-[#8eabe480] bg-white/60 backdrop-blur-md px-[30px] md:px-[45px] py-4 md:py-5 shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] relative">
-          <ul className="flex items-center gap-[15px] md:gap-[25px] list-none p-0 m-0">
+        <nav className="hidden md:block rounded-full border border-[#8eabe480] bg-white/60 backdrop-blur-md px-[20px] lg:px-[30px] xl:px-[45px] py-3 lg:py-4 xl:py-5 shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] relative">
+          <ul className="flex items-center gap-[10px] lg:gap-[15px] xl:gap-[25px] list-none p-0 m-0">
             {navItems.map((item) => (
               <li
                 key={item.label}
                 onMouseEnter={() => setActiveMenu(item.key || null)}
                 onMouseLeave={() => setActiveMenu(null)}
-                className="group relative flex flex-col items-center gap-1 text-[14.5px] font-semibold text-[#1a1a1a]"
+                className="group relative flex flex-col items-center gap-1 text-[13px] lg:text-[14px] xl:text-[14.5px] font-semibold text-[#1a1a1a] whitespace-nowrap"
               >
                 <div className="py-1">
                   <Link
@@ -325,7 +325,7 @@ export function NavBar() {
         <div className="cta-button hidden sm:block">
           <a
             href="#"
-            className="inline-block whitespace-nowrap rounded-full bg-blue-600 px-[24px] sm:px-[30px] py-[10px] sm:py-[12px] text-[14px] sm:text-[15px] font-semibold text-white transition-colors hover:bg-blue-700"
+            className="inline-block whitespace-nowrap rounded-full bg-blue-600 px-[20px] lg:px-[24px] xl:px-[30px] py-[8px] lg:py-[10px] xl:py-[12px] text-[13px] lg:text-[14px] xl:text-[15px] font-semibold text-white transition-colors hover:bg-blue-700"
           >
             Apply Now
           </a>

@@ -13,7 +13,7 @@ const campusData = [
     description: "A leading private university known for strong programs in engineering, management, and law. Focuses on innovation, research, and industry-aligned education.",
   },
   {
-    university: "ADYPU, Pune",
+    university: "Ajeenkya DY Patil University Pune",
     location: "Pune",
     image: "/images/campuses-main/ajinkya.png",
     description: "An innovation-driven university focused on future-ready education and entrepreneurship. Offers modern infrastructure with strong industry integration.",
@@ -25,7 +25,7 @@ const campusData = [
     description: "A well-known university offering programs in engineering, management, and sciences. Emphasizes practical learning and strong industry exposure.",
   },
   {
-    university: "DY Patil University, Ambi (Pune)",
+    university: "DY Patil University, Ambi",
     location: "Ambi, Pune",
     image: "/images/campuses-main/Ambi.png",
     description: "A modern campus with advanced facilities and a vibrant learning environment. Known for industry-focused programs and holistic development.",
@@ -56,7 +56,7 @@ export default function CampusesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`group bg-white rounded-2xl overflow-hidden border border-slate-100/80 shadow-sm hover:shadow-2xl hover:shadow-blue-200/20 transition-all duration-500 hover:-translate-y-2 flex flex-col ${index === campusData.length - 1 ? "md:col-start-2" : ""
+              className={`group bg-white rounded-2xl overflow-hidden border border-slate-100/80 shadow-sm flex flex-col ${index === campusData.length - 1 ? "md:col-start-2" : ""
                 }`}
             >
               {/* Campus Image - Priority Layout */}
@@ -65,10 +65,10 @@ export default function CampusesSection() {
                   src={campus.image}
                   alt={campus.university}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
               </div>
 
               {/* Compact Content Section */}
@@ -81,7 +81,7 @@ export default function CampusesSection() {
                   <span>{campus.location}</span>
                 </div>
 
-                <p className="text-slate-500 text-[11px] font-medium leading-relaxed mb-6 opacity-85 group-hover:opacity-100 transition-opacity">
+                <p className="text-slate-500 text-[11px] font-medium leading-relaxed mb-6 opacity-85">
                   {campus.description}
                 </p>
 

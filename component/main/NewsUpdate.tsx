@@ -27,6 +27,7 @@ const displayData = [...newsData, ...newsData, ...newsData];
 
 export default function NewsAndUpdatesSlider() {
   const [isMounted, setIsMounted] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const x = useMotionValue(0);
   const constraintsRef = useRef<HTMLDivElement>(null);
 
@@ -47,6 +48,17 @@ export default function NewsAndUpdatesSlider() {
     window.addEventListener("resize", calculateInitialX);
     return () => window.removeEventListener("resize", calculateInitialX);
   }, [x]);
+
+  // Auto Scroll Logic
+  useEffect(() => {
+    if (!isMounted || isPaused) return;
+
+    const interval = setInterval(() => {
+      handleScroll("right");
+    }, 4000); // Same 4s interval as SuccessStories
+
+    return () => clearInterval(interval);
+  }, [isMounted, isPaused]);
 
   const handleScroll = (direction: "left" | "right") => {
     const gap = 12;
@@ -96,7 +108,12 @@ export default function NewsAndUpdatesSlider() {
 
         {/* Draggable Slider Container */}
         <div className="relative">
-          <div ref={constraintsRef} className="sm:overflow-hidden overflow-visible -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div 
+            ref={constraintsRef} 
+            className="sm:overflow-hidden overflow-visible -mx-4 px-4 sm:mx-0 sm:px-0"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
             <motion.div
               drag="x"
               style={{ x, width: "max-content" }}

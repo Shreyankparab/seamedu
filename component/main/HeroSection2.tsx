@@ -132,7 +132,7 @@ export default function HeroSection2() {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24 h-full relative z-30 flex flex-col items-start pt-36 sm:pt-40 sm:mt-14 lg:pt-32 pb-32">
+      <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24 h-full relative z-30 flex flex-col items-start pt-36 sm:pt-40 sm:mt-14 lg:pt-24 lg:mt-6 pb-32">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSlide}
