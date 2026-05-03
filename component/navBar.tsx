@@ -250,41 +250,41 @@ export function NavBar() {
                       transition={{ duration: 0.15 }}
                       className={`absolute top-full pt-6 pointer-events-auto z-[100] ${item.key === "programs" ? "left-[-160px]" : "left-0"}`}
                     >
-                      <div className={`bg-white/90 backdrop-blur-3xl rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] border border-white/80 overflow-hidden cursor-default transition-all duration-300
+                      <div className={`bg-white/95 backdrop-blur-3xl rounded-3xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] border border-white/80 overflow-hidden cursor-default transition-all duration-300
                         ${item.key === "programs"
-                          ? (menuData.programs[activeCategory]?.subCategories.length >= 3 ? "w-[900px]" : "w-[680px]")
+                          ? (menuData.programs[activeCategory]?.subCategories.length >= 3 ? "w-[980px]" : "w-[720px]")
                           : "min-w-[190px]"}`}
                       >
                         {/* Programs Mega Menu */}
                         {item.key === "programs" ? (
-                          <div className="flex min-h-[320px]">
+                          <div className="flex min-h-[340px]">
                             {/* Categories Column */}
-                            <div className="w-[180px] bg-white/5 border-r border-white/10 py-6 px-3 flex flex-col gap-1">
+                            <div className="w-[190px] bg-slate-50/50 border-r border-slate-100 py-7 px-3 flex flex-col gap-1">
                               {menuData.programs.map((prog, idx) => (
                                 <div
                                   key={prog.category}
                                   onMouseEnter={() => setActiveCategory(idx)}
-                                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl cursor-default transition-all ${activeCategory === idx ? "text-blue-600 bg-white shadow-sm font-bold" : "text-slate-700 hover:bg-slate-100/50"}`}
+                                  className={`flex items-center justify-between px-4 py-2.5 rounded-xl cursor-default transition-all ${activeCategory === idx ? "text-blue-600 bg-white shadow-sm font-bold scale-[1.02]" : "text-slate-600 hover:bg-slate-100/60"}`}
                                 >
                                   <span className="text-[14px]">{prog.category}</span>
-                                  <ChevronRight size={13} className={activeCategory === idx ? "opacity-100" : "opacity-0"} />
+                                  <ChevronRight size={14} className={activeCategory === idx ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1"} />
                                 </div>
                               ))}
                             </div>
-
+  
                             {/* Content Column */}
-                            <div className="flex-1 p-7 overflow-y-auto">
-                              <div className={`grid gap-x-8 gap-y-10 ${menuData.programs[activeCategory]?.subCategories.length >= 3 ? "grid-cols-3" : "grid-cols-2"}`}>
+                            <div className="flex-1 p-8 overflow-y-auto overflow-x-hidden scrollbar-hide">
+                              <div className={`grid gap-x-10 gap-y-10 ${menuData.programs[activeCategory]?.subCategories.length >= 3 ? "grid-cols-3" : "grid-cols-2"}`}>
                                 {menuData.programs[activeCategory].subCategories.map((sub) => (
-                                  <div key={sub.title}>
-                                    <h4 className="text-[13px] font-black text-slate-900 border-b-2 border-blue-600 w-fit pb-1 mb-4 px-1 uppercase tracking-tight">{sub.title}</h4>
+                                  <div key={sub.title} className="flex flex-col">
+                                    <h4 className="text-[11px] font-black text-slate-900 border-b-2 border-blue-600 w-fit pb-1 mb-5 px-1 uppercase tracking-wider">{sub.title}</h4>
                                     <ul className="flex flex-col gap-4">
                                       {sub.courses.map(course => (
-                                        <li key={course.label} className="flex items-start gap-2 group/item px-1">
-                                          <div className="w-1 h-1 rounded-full bg-slate-200 mt-2 group-hover/item:bg-blue-600 transition-colors" />
+                                        <li key={course.label} className="flex items-start gap-2.5 group/item">
+                                          <div className="w-1 h-1 rounded-full bg-blue-200 mt-1.5 group-hover/item:bg-blue-600 transition-all shrink-0" />
                                           <Link
                                             href={course.href}
-                                            className="text-[13.5px] text-slate-500 hover:text-blue-600 font-semibold leading-tight transition-colors"
+                                            className="text-[12.5px] text-slate-500 hover:text-blue-600 font-bold leading-normal transition-colors"
                                             onClick={() => setActiveMenu(null)}
                                           >
                                             {course.label}

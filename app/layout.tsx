@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/component/navBar";
-import Footer from "@/component/Footer";
+import Footer1 from "@/component/Footer1";
 import InquiryForm from "@/component/main/InquiryForm";
 import ChatWidget from "@/component/main/ChatWidget";
-import Footer1 from "@/component/Footer1";
 
 const inter = Inter({
   variable: "--font-inter",

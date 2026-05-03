@@ -38,7 +38,6 @@ export default function CampusesSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.3em] text-blue-600 mb-2">Where We Teach</h2>
           <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
             Our <span className="text-blue-600">Campuses</span>
           </h2>

@@ -72,19 +72,33 @@ const SuccessStories = () => {
 
   const duplicatedStories = [...stories, ...stories, ...stories];
 
+  const [dimensions, setDimensions] = useState({ width: 320, gap: 32 });
+
   useEffect(() => {
     setIsMounted(true);
-    const calculateInitialX = () => {
-      const gap = 32; // md: gap-8
-      const isMobile = window.innerWidth < 640;
-      const width = isMobile ? (window.innerWidth < 400 ? 260 : 280) : 320;
-      const totalWidthOfOneSet = stories.length * (width + gap);
-      x.set(-totalWidthOfOneSet);
+    const updateDimensions = () => {
+      const w = window.innerWidth;
+      // Matching Tailwind classes: w-[260px] sm:w-[280px] md:w-[320px]
+      // and gap-6 (24px) sm:gap-8 (32px)
+      if (w < 640) {
+        setDimensions({ width: 260, gap: 24 });
+      } else if (w < 768) {
+        setDimensions({ width: 280, gap: 32 });
+      } else {
+        setDimensions({ width: 320, gap: 32 });
+      }
     };
-    calculateInitialX();
-    window.addEventListener("resize", calculateInitialX);
-    return () => window.removeEventListener("resize", calculateInitialX);
-  }, [stories.length, x]);
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+    const { width, gap } = dimensions;
+    const totalWidthOfOneSet = stories.length * (width + gap);
+    x.set(-totalWidthOfOneSet);
+  }, [isMounted, dimensions, stories.length, x]);
 
   // Auto Scroll Logic
   useEffect(() => {
@@ -95,12 +109,10 @@ const SuccessStories = () => {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, [isMounted, isPaused, activeVideo]);
+  }, [isMounted, isPaused, activeVideo, dimensions]);
 
   const handleScroll = (direction: "left" | "right") => {
-    const gap = 32;
-    const isMobile = window.innerWidth < 640;
-    const width = isMobile ? (window.innerWidth < 400 ? 260 : 280) : 320;
+    const { width, gap } = dimensions;
     const scrollStep = width + gap;
 
     const currentPos = x.get();
@@ -144,23 +156,17 @@ const SuccessStories = () => {
             style={{ x, width: "max-content" }}
             onUpdate={(latest) => {
               const curX = latest.x as number;
-              const gap = 32;
-              const isMobile = window.innerWidth < 640;
-              const width = isMobile ? (window.innerWidth < 400 ? 260 : 280) : 320;
+              const { width, gap } = dimensions;
               const totalWidthOfOneSet = stories.length * (width + gap);
 
               if (curX <= -totalWidthOfOneSet * 2) {
                 x.set(curX + totalWidthOfOneSet);
-              } else if (curX >= -totalWidthOfOneSet * 0.5 && curX > 0) {
-                x.set(curX - totalWidthOfOneSet);
-              } else if (curX > 0) {
+              } else if (curX >= 0) {
                 x.set(curX - totalWidthOfOneSet);
               }
             }}
             onDragEnd={(_, info) => {
-              const gap = 32;
-              const isMobile = window.innerWidth < 640;
-              const width = isMobile ? (window.innerWidth < 400 ? 260 : 280) : 320;
+              const { width, gap } = dimensions;
               const scrollStep = width + gap;
               
               const threshold = 50; 
@@ -182,7 +188,7 @@ const SuccessStories = () => {
                 duration: 0.6
               });
             }}
-            className="flex gap-6 sm:gap-8 pb-10 pt-4 px-4"
+            className="flex gap-6 sm:gap-8 pb-10 pt-4 px-0 sm:px-4"
           >
             {duplicatedStories.map((story, index) => (
               <div 
@@ -227,7 +233,7 @@ const SuccessStories = () => {
                     <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/60 to-transparent pointer-events-none"></div>
                     <div className="absolute top-4 left-4 right-4 flex items-start space-x-2 z-20 pointer-events-none">
                       <div className="w-8 h-8 flex-shrink-0 bg-white rounded-full shadow-lg overflow-hidden border border-white/30">
-                         <img src="https://yt3.ggpht.com/4AiDGdFXrWFfvnoKnuxcjS5Lovn3JxiUbUvhCaTKkbDRk1JphjZ8FiKm9_JFuItnf_zXV3_z=s176-c-k-c0x00ffffff-no-rj-mo" alt="Seamedu" draggable={false} className="w-full h-full object-cover" />
+                         <img src="/images/logo.svg" alt="Seamedu" draggable={false} className="w-full h-full object-contain p-1" />
                       </div>
                       <div className="text-white text-left leading-tight drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] overflow-hidden">
                         <p className="text-[11px] sm:text-xs font-bold line-clamp-2">{story.title}</p>

@@ -116,9 +116,6 @@ export default function PlacementHighlights() {
         {/* Left panel */}
         <div className="bg-slate-900 flex flex-col justify-center">
           <div className="pl-6 pt-10 pb-6 md:w-72 md:flex-shrink-0 md:flex md:flex-col md:justify-center md:pl-12 md:py-16 md:gap-5 mr-10">
-            <p className="hidden sm:block text-xs uppercase tracking-widest text-white/40 mb-3">
-              Placement Highlights
-            </p>
             <h2 className="text-3xl md:text-4xl font-semibold leading-snug text-white mb-3">
               See Where Our <span className="text-blue-600">Students</span> Are Getting Placed
             </h2>

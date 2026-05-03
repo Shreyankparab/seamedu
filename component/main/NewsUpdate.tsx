@@ -94,22 +94,22 @@ export default function NewsAndUpdatesSlider() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-6">
           <div className="space-y-2">
             <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-3">
-              News & <span className="text-blue-600">Updates</span>
+              Events & <span className="text-blue-600">Updates</span>
             </h2>
             <p className="text-slate-500 text-md md:text-lg max-w-4xl font-medium">Stay updated with the latest news and events at Seamedu School of Pro Expression.</p>
           </div>
           {/* Desktop View More - Shifted Right */}
           <div className="hidden sm:block">
-             <button className="hidden sm:flex items-center  text-blue-700 text-[14px] font-semibold  tracking-widest hover:text-slate-900 transition-all active:scale-95">
-                         View More<ChevronRight size={16} className="" />
-                       </button>
+            <button className="hidden sm:flex items-center  text-blue-700 text-[14px] font-semibold  tracking-widest hover:text-slate-900 transition-all active:scale-95">
+              View More<ChevronRight size={16} className="" />
+            </button>
           </div>
         </div>
 
         {/* Draggable Slider Container */}
         <div className="relative">
-          <div 
-            ref={constraintsRef} 
+          <div
+            ref={constraintsRef}
             className="sm:overflow-hidden overflow-visible -mx-4 px-4 sm:mx-0 sm:px-0"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
